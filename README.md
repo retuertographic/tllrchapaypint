@@ -13,12 +13,37 @@ sin dependencias externas y despliegue en GitHub Pages.
 ## Estructura
 
 ```
-index.html            Página completa (hero, producto, cómo funciona, precios, FAQ, contacto)
+index.html            Página completa en español (hero, producto, cómo funciona, precios, FAQ, contacto)
+en/index.html         La misma página en inglés — GENERADA, no editar a mano (ver abajo)
+gracias/, thank-you/  Páginas de agradecimiento tras enviar el formulario (noindex)
+404.html              Página de error para cualquier URL que no exista
+robots.txt            Permite todo y declara el sitemap
+sitemap.xml           Las dos portadas, con sus equivalencias hreflang
 assets/site.css       Sistema visual completo
 assets/config.js      ← ÚNICO archivo con los datos reales que hay que rellenar
 assets/i18n.js        Todos los textos en español e inglés
-assets/site-common.js Cabecera, idioma, FAQ, modal legal y formulario
+assets/layout.js      Parciales comunes: cabecera, pie, modal legal y botón "arriba"
+assets/site-common.js Menú, idioma, FAQ, modal legal y formulario
+scripts/build-en.js   Genera en/index.html a partir de index.html + i18n.js
 ```
+
+## Versión en inglés
+
+Cada idioma tiene su propia URL (`/` y `/en/`) para que Google indexe los
+dos, enlazadas entre sí con `hreflang`. El selector de idioma lleva de una a
+otra. `en/index.html` no se edita a mano: después de cambiar `index.html` o
+los textos de `assets/i18n.js`, se regenera y se sube junto con el resto:
+
+```bash
+node scripts/build-en.js
+```
+
+El script falla si a alguna clave le falta la traducción al inglés. Los
+title, description y Open Graph en inglés están al principio del script.
+
+Tras enviar el formulario, la web lleva a `/gracias/` o `/thank-you/` según
+el idioma (atributo `data-thanks` del `<body>`). Esas URL son las que hay que
+medir como conversión.
 
 ## Pendiente de rellenar
 
@@ -62,7 +87,8 @@ No usa ningún servicio de terceros por defecto. El mecanismo se elige en
 
 ## Desarrollo
 
-Es HTML estático: basta con abrir `index.html` en el navegador, o servirlo con
+Es HTML estático. Sírvelo con un servidor local (abriendo el archivo directamente
+funcionan las páginas, pero no los enlaces entre idiomas ni la 404):
 
 ```bash
 python3 -m http.server 4173

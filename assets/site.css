@@ -403,6 +403,8 @@ header.scrolled .burger span{background:var(--ink);}
 .form-card input.invalid,.form-card textarea.invalid,.form-card select.invalid{border-color:#FF8A80;background:rgba(255,138,128,.08);}
 .field-error{display:none;color:#FF8A80;font-size:.75rem;margin-top:5px;line-height:1.4;}
 .field-error.show{display:block;}
+.form-card .req{color:var(--amber);margin-left:2px;}
+.form-card .req-note{font-size:.74rem;color:rgba(255,255,255,.62);margin:-14px 0 18px;}
 .form-captcha{background:rgba(255,179,0,.07);border:1px dashed rgba(255,179,0,.4);border-radius:12px;padding:14px 16px;margin:4px 0 16px;}
 .form-captcha label{color:var(--amber-light)!important;}
 .captcha-msg{font-size:.77rem;margin-top:6px;display:none;}
@@ -412,6 +414,8 @@ header.scrolled .burger span{background:var(--ink);}
 .form-consent input[type=checkbox]{width:auto;margin-top:3px;flex:none;accent-color:var(--amber);}
 .form-consent label{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.6);margin:0;font-weight:400;}
 .form-consent a{color:var(--amber);font-weight:600;}
+.form-consent .consent-text{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.6);}
+.form-consent .consent-text label{display:inline;font-size:inherit;color:inherit;font-weight:400;letter-spacing:0;margin:0;cursor:pointer;}
 .form-consent button.inline-link{background:none;border:none;color:var(--amber);font-weight:600;cursor:pointer;font-family:inherit;font-size:inherit;padding:0;text-decoration:underline;}
 .form-card .btn{width:100%;}
 .form-status{display:none;align-items:flex-start;gap:10px;margin-top:16px;padding:13px 15px;border-radius:11px;font-size:.85rem;line-height:1.6;}
@@ -437,7 +441,7 @@ footer{background:var(--ink-2);padding:54px 0 30px;color:rgba(255,255,255,.55);}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.08);}
 .footer-top .f-brand .brand-text{color:#fff;}
 .footer-top p.f-desc{font-size:.87rem;line-height:1.75;margin-top:16px;max-width:42ch;}
-.footer-col h4{font-family:'Sora',sans-serif;color:#fff;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px;}
+.footer-col .footer-h{font-family:'Sora',sans-serif;color:#fff;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px;}
 .footer-col ul{display:flex;flex-direction:column;gap:10px;}
 .footer-col a,.footer-col button{
   color:rgba(255,255,255,.55);font-size:.87rem;background:none;border:none;padding:0;cursor:pointer;
@@ -528,8 +532,19 @@ header.scrolled .lang-btn{background:var(--gray);border-color:var(--line);color:
 .to-top:hover{background:var(--red-light);}
 .to-top svg{width:19px;height:19px;}
 
+/* Menú móvil y modal legal: cerrados no deben recibir foco de teclado.
+   visibility se retrasa al cerrar para que la animación se vea entera. */
+@media (max-width:960px){
+  .nav-links{visibility:hidden;transition:transform .35s ease,visibility 0s linear .35s;}
+  .nav-links.open{visibility:visible;transition:transform .35s ease;}
+}
+.legal-modal{visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s;}
+.legal-modal.open{visibility:visible;transition:opacity .25s ease;}
+
 /* ---------- ACCESIBILIDAD ---------- */
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px;}
+.skip-link{position:fixed;left:16px;top:-60px;z-index:400;background:var(--amber);color:var(--ink);padding:10px 16px;border-radius:8px;font-family:'Sora',sans-serif;font-weight:600;font-size:.9rem;transition:top .15s ease;}
+.skip-link:focus{top:12px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
@@ -563,6 +578,7 @@ header.scrolled .lang-btn{background:var(--gray);border-color:var(--line);color:
   letter-spacing:-.03em;line-height:1.12;margin-bottom:18px;
 }
 .thanks h1 .accent{color:var(--amber);}
+.thanks p.lead a{color:var(--amber);text-decoration:underline;}
 .thanks p.lead{color:rgba(255,255,255,.72);font-size:1.06rem;line-height:1.8;max-width:56ch;margin:0 auto 34px;}
 .thanks-next{
   display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto 40px;max-width:720px;text-align:left;

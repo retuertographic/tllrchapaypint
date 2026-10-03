@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taller de Chapa y Pintura · Software de gestión integral para talleres</title>
-<meta name="description" content="Software de gestión para talleres de chapa y pintura: recepción con firma digital, peritaje de daños sobre esquema visual, fotos y vídeos, seguimiento en tiempo real, vehículos de cortesía y entrega. Cuota plana por taller.">
+<title>Software de gestión para talleres de chapa y pintura</title>
+<meta name="description" content="Gestiona tu taller de chapa y pintura: recepción con firma digital, daños sobre esquema, fotos, seguimiento en tiempo real y cortesía. Cuota plana por taller.">
 <meta name="theme-color" content="#151A21">
 <link rel="canonical" href="https://www.tallerdechapaypintura.com/">
+<link rel="alternate" hreflang="es" href="https://www.tallerdechapaypintura.com/">
+<link rel="alternate" hreflang="en" href="https://www.tallerdechapaypintura.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.tallerdechapaypintura.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Taller de Chapa y Pintura">
@@ -14,6 +17,7 @@
 <meta property="og:description" content="Recepción con firma digital, daños sobre el esquema del vehículo, seguimiento en tiempo real y portal de cliente. Cuota plana por taller, sin coste por usuario.">
 <meta property="og:url" content="https://www.tallerdechapaypintura.com/">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,17 +38,19 @@
 }
 </script>
 </head>
-<body>
+<body data-lang-lock="es" data-lang-alt="en/" data-thanks="gracias/">
 
 <!-- ======================= CABECERA ======================= -->
 <div data-layout="header"></div>
+
+<main id="main">
 
 <!-- ======================= HERO ======================= -->
 <section class="hero" id="top">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="hero-tag" data-i18n="hero_tag">Software para talleres de chapa y pintura</span>
+        <span class="hero-tag" data-i18n="hero_tag">Gestión integral del taller</span>
         <h1>
           <span data-i18n="hero_h1a">Del parte a la entrega,</span>
           <span class="accent" data-i18n="hero_h1b">todo el taller en una pantalla</span>
@@ -303,7 +309,7 @@
       <article class="price-card">
         <h3 data-i18n="p1_n">Taller</h3>
         <p class="who" data-i18n="p1_w">Talleres independientes de una sola sede.</p>
-        <div class="amount"><b data-i18n="p1_a">99</b><span>€/mes</span></div>
+        <div class="amount"><b data-i18n="p1_a">99</b><span data-i18n="pr_month">€/mes</span></div>
         <p class="per" data-i18n="p1_per">por taller y mes, IVA no incluido</p>
         <ul>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p1_f1">Usuarios ilimitados</span></li>
@@ -320,7 +326,7 @@
         <span class="flag" data-i18n="p2_flag">El más elegido</span>
         <h3 data-i18n="p2_n">Profesional</h3>
         <p class="who" data-i18n="p2_w">Talleres en crecimiento que quieren que el cliente no llame.</p>
-        <div class="amount"><b data-i18n="p2_a">179</b><span>€/mes</span></div>
+        <div class="amount"><b data-i18n="p2_a">179</b><span data-i18n="pr_month">€/mes</span></div>
         <p class="per" data-i18n="p2_per">por taller y mes, IVA no incluido</p>
         <ul>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><span data-i18n="p2_f1">Todo lo del plan Taller</span></li>
@@ -364,28 +370,28 @@
 
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q1">¿Cuánto se tarda en ponerlo en marcha?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a1">El alta y la configuración inicial se hacen en menos de una semana.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q1">¿Cuánto se tarda en ponerlo en marcha?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a1">El alta y la configuración inicial se hacen en menos de una semana. Cargamos tus datos de taller, damos de alta a tu equipo y hacemos una sesión de formación. No necesitas instalar nada: funciona en el navegador y en tablet.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q2">¿Tengo que pagar por cada mecánico que use el sistema?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a2">No. La cuota es plana por taller y los usuarios son ilimitados.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q2">¿Tengo que pagar por cada mecánico que use el sistema?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a2">No. La cuota es plana por taller y los usuarios son ilimitados. Puedes dar de alta a recepción, chapistas, pintores y administración sin que cambie la factura.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q3">¿La firma digital tiene validez?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a3">La firma se captura junto a la fecha, la hora y el expediente concreto que se está firmando.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q3">¿La firma digital tiene validez?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a3">La firma se captura junto a la fecha, la hora y el expediente concreto que se está firmando, y queda archivada con el resto de la documentación de la orden. Ante una reclamación tienes el parte firmado, las fotos de entrada y todo el histórico de la reparación en un mismo sitio.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q4">¿El asistente de IA es un extra de pago?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a4">No. Viene incluido en el plan Profesional.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q4">¿El asistente de IA es un extra de pago?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a4">No. Viene incluido en el plan Profesional. Si prefieres usar tu propia clave de un proveedor de IA (BYOK), puedes hacerlo sin coste adicional.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q5">¿Qué pasa con los datos de mis clientes?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a5">Cada taller trabaja sobre su propia instancia aislada dentro de la plataforma.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q5">¿Qué pasa con los datos de mis clientes?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a5">Cada taller trabaja sobre su propia instancia aislada dentro de la plataforma. El tratamiento se hace conforme al RGPD, actuamos como encargados del tratamiento y firmamos el contrato correspondiente. Puedes exportar tus datos cuando quieras.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span data-i18n="q6">¿Funciona en tablet y en el móvil del taller?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-a"><p data-i18n="a6">Sí. La recepción, el marcado de daños y la subida de fotos están pensados para tablet y móvil.</p></div>
+        <button type="button" class="faq-q" aria-expanded="false"><span data-i18n="q6">¿Funciona en tablet y en el móvil del taller?</span><span class="sign" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p data-i18n="a6">Sí. La recepción, el marcado de daños y la subida de fotos están pensados para tablet y móvil, que es donde realmente se hace el trabajo. La parte de gestión y los informes se ven mejor en ordenador.</p></div>
       </div>
     </div>
   </div>
@@ -439,35 +445,37 @@
         <p class="note" data-i18n="form_note">Rellena el formulario y te escribimos para cuadrar una demo. Si prefieres ir directo, llámanos o escríbenos por WhatsApp.</p>
 
         <form id="demoForm" data-form-kind="demo" novalidate>
+          <p class="req-note" data-i18n="form_req_note">Los campos marcados con * son obligatorios.</p>
+
           <div class="form-row">
             <div>
-              <label for="d_name" data-i18n="form_name">Nombre y apellidos</label>
-              <input type="text" id="d_name" name="name" autocomplete="name">
+              <label for="d_name"><span data-i18n="form_name">Nombre y apellidos</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="d_name" required aria-describedby="d_name_err" name="name" autocomplete="name">
               <span class="field-error" id="d_name_err"></span>
             </div>
             <div>
-              <label for="d_shop" data-i18n="form_shop">Nombre del taller</label>
-              <input type="text" id="d_shop" name="shop" autocomplete="organization">
+              <label for="d_shop"><span data-i18n="form_shop">Nombre del taller</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="d_shop" required aria-describedby="d_shop_err" name="shop" autocomplete="organization">
               <span class="field-error" id="d_shop_err"></span>
             </div>
           </div>
 
           <div class="form-row">
             <div>
-              <label for="d_email" data-i18n="form_email">Email</label>
-              <input type="email" id="d_email" name="email" autocomplete="email">
+              <label for="d_email"><span data-i18n="form_email">Email</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="d_email" required aria-describedby="d_email_err" name="email" autocomplete="email">
               <span class="field-error" id="d_email_err"></span>
             </div>
             <div>
-              <label for="d_phone" data-i18n="form_phone">Teléfono</label>
-              <input type="tel" id="d_phone" name="phone" autocomplete="tel" data-i18n-ph="form_phone_ph" placeholder="Ej: 600123456">
+              <label for="d_phone"><span data-i18n="form_phone">Teléfono</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="d_phone" required aria-describedby="d_phone_err" name="phone" autocomplete="tel" data-i18n-ph="form_phone_ph" placeholder="Ej: 600123456">
               <span class="field-error" id="d_phone_err"></span>
             </div>
           </div>
 
           <div class="full">
-            <label for="d_size" data-i18n="form_size">Entradas al mes</label>
-            <select id="d_size" name="size">
+            <label for="d_size"><span data-i18n="form_size">Entradas al mes</span><span class="req" aria-hidden="true">*</span></label>
+            <select id="d_size" required aria-describedby="d_size_err" name="size">
               <option value="" data-i18n="form_size_ph">Selecciona una opción</option>
               <option value="&lt;30" data-i18n="form_size_1">Menos de 30</option>
               <option value="30-80" data-i18n="form_size_2">Entre 30 y 80</option>
@@ -484,17 +492,19 @@
 
           <div class="form-captcha">
             <label for="d_captcha" data-i18n="captcha_label">Para confirmar que eres una persona: ¿cuánto suman tres más cuatro? (en cifra)</label>
-            <input type="text" id="d_captcha" autocomplete="off" data-i18n-ph="captcha_ph" placeholder="Tu respuesta">
+            <input type="text" id="d_captcha" autocomplete="off" required aria-describedby="d_captcha_msg" data-i18n-ph="captcha_ph" placeholder="Tu respuesta">
             <span class="captcha-msg err" id="d_captcha_msg" data-i18n="captcha_err">Respuesta incorrecta, inténtalo de nuevo.</span>
           </div>
 
           <div class="form-consent">
-            <input type="checkbox" id="d_consent">
-            <label for="d_consent">
-              <span data-i18n="consent_a">He leído y acepto la</span>
+            <input type="checkbox" id="d_consent" required aria-labelledby="d_consent_text" aria-describedby="d_consent_err">
+            <!-- El botón de la política no puede ir dentro de un <label>:
+                 el texto se reparte en dos labels del mismo checkbox. -->
+            <p class="consent-text" id="d_consent_text">
+              <label for="d_consent" data-i18n="consent_a">He leído y acepto la</label>
               <button type="button" class="inline-link" data-legal-tab="privacidad" data-i18n="consent_b">política de privacidad</button>
-              <span data-i18n="consent_c">y el tratamiento de mis datos para gestionar esta solicitud.</span>
-            </label>
+              <label for="d_consent" data-i18n="consent_c">y el tratamiento de mis datos para gestionar esta solicitud.</label>
+            </p>
           </div>
           <span class="field-error" id="d_consent_err"></span>
 
@@ -514,6 +524,8 @@
     <a href="#contacto" class="btn" data-i18n="cta_btn">Solicitar una demo</a>
   </div>
 </section>
+
+</main>
 
 <!-- ======================= PIE ======================= -->
 <div data-layout="footer"></div>

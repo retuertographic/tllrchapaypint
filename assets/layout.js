@@ -20,8 +20,9 @@
 
   var LAYOUT = {
     header: `<header id="site-header">
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
   <div class="wrap">
-    <nav aria-label="Navegación principal">
+    <nav aria-label="Navegación principal" data-i18n-aria="aria_nav">
       <a class="brand" href="#top">
         <span class="mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
@@ -39,16 +40,16 @@
       </ul>
 
       <div class="lang-switch" id="langSwitch">
-        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma">
+        <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-controls="langMenu" aria-label="Cambiar idioma" data-i18n-aria="aria_lang">
           <span class="flag" id="langFlag">🇪🇸</span><span id="langCode">ES</span>
         </button>
-        <div class="lang-menu" role="menu">
-          <button data-lang="es" role="menuitem"><span class="flag">🇪🇸</span> Español</button>
-          <button data-lang="en" role="menuitem"><span class="flag">🇬🇧</span> English</button>
+        <div class="lang-menu" id="langMenu">
+          <button type="button" data-lang="es" lang="es"><span class="flag">🇪🇸</span> Español</button>
+          <button type="button" data-lang="en" lang="en"><span class="flag">🇬🇧</span> English</button>
         </div>
       </div>
 
-      <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <button type="button" class="burger" id="burgerBtn" aria-label="Abrir menú" data-i18n-aria="aria_menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -68,7 +69,7 @@
       </div>
 
       <div class="footer-col">
-        <h4 data-i18n="f_col1">Producto</h4>
+        <h2 class="footer-h" data-i18n="f_col1">Producto</h2>
         <ul>
           <li><a href="#producto" data-i18n="f_l_feat">Características</a></li>
           <li><a href="#como-funciona" data-i18n="f_l_flow">Cómo funciona</a></li>
@@ -78,7 +79,7 @@
       </div>
 
       <div class="footer-col">
-        <h4 data-i18n="f_col2">Compañía</h4>
+        <h2 class="footer-h" data-i18n="f_col2">Compañía</h2>
         <ul>
           <li><a href="#contacto" data-i18n="f_l_demo">Solicitar demo</a></li>
           <li><a data-cfg-email href="mailto:">hola@tallerdechapaypintura.com</a></li>
@@ -102,12 +103,12 @@
   <div class="legal-box">
     <div class="legal-head">
       <h3 id="legalTitle" data-i18n="legal_title">Información legal</h3>
-      <button class="legal-close" id="legalClose" aria-label="Cerrar">&times;</button>
+      <button type="button" class="legal-close" id="legalClose" aria-label="Cerrar" data-i18n-aria="aria_close">&times;</button>
     </div>
     <div class="legal-tabs">
-      <button class="legal-tab active" data-legal-panel="aviso" data-i18n="f_legal">Aviso legal</button>
-      <button class="legal-tab" data-legal-panel="privacidad" data-i18n="f_priv">Política de privacidad</button>
-      <button class="legal-tab" data-legal-panel="cookies" data-i18n="f_cook">Política de cookies</button>
+      <button type="button" class="legal-tab active" data-legal-panel="aviso" data-i18n="f_legal">Aviso legal</button>
+      <button type="button" class="legal-tab" data-legal-panel="privacidad" data-i18n="f_priv">Política de privacidad</button>
+      <button type="button" class="legal-tab" data-legal-panel="cookies" data-i18n="f_cook">Política de cookies</button>
     </div>
     <div class="legal-body">
       <div class="legal-panel active" id="legalPanelAviso">
@@ -153,7 +154,7 @@
     </div>
   </div>
 </div>`,
-    totop: `<button class="to-top" id="toTop" aria-label="Volver arriba">
+    totop: `<button type="button" class="to-top" id="toTop" aria-label="Volver arriba" data-i18n-aria="aria_top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>`,
   };
